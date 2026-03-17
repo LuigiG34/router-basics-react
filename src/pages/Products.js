@@ -12,7 +12,9 @@ function ProductsPage(){
             <h1>The products page !</h1>
             <ul>
                 {PRODUCTS.map(product => (
-                    <li><Link key={product.id} to={`/products/${product.id}`}>{product.title}</Link></li>
+                    <li key={product.id}>
+                        <Link to={product.id}>{product.title}</Link>
+                    </li>
                 ))}
             </ul>
         </>
